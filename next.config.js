@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
-module.exports = withPWA({
+module.exports = {
   experimental: {
     runtime: 'nodejs',
     serverComponents: true,
   },
-})
+}
