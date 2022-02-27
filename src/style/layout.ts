@@ -3,6 +3,7 @@ import { css } from "@emotion/react";
 const wrapStyle = css`
   display: flex;
   flex: 1;
+  background: #0798ec;
 `;
 
 const sideStyle = css`
@@ -29,7 +30,9 @@ const nextStyle = css`
   height: 300px;
   width: 300px;
   background: #000;
-  transform: rotate(45deg) translate(225px, 0px);
+  transform: rotate(45deg) translate(225px, 0px) scale(1);
+  animation: scale 3s 0s infinite;
+  transition: 1s transform;
   &:after {
     content: "";
     position: absolute;
@@ -51,19 +54,36 @@ const nextStyle = css`
     top: 0;
     left: 0;
     z-index: 10;
-    background: #000;
+    background: #ff5f45;
     width: 100%;
     height: 100%;
+  }
+  &:hover {
+    animation: none;
   }
   a {
     color: #fff;
   }
+  @keyframes scale {
+    0% {
+      transform: rotate(45deg) translate(225px, 0px) scale(1);
+    }
+    50% {
+      transform: rotate(45deg) translate(225px, 0px) scale(0.9);
+    }
+    100% {
+      transform: rotate(45deg) translate(225px, 0px) scale(1);
+    }
+  }
 `;
 
 const onRotateStyle = css`
-  transform: rotate(45deg) translate(225px, 0px) scale(15);
-  transition: 1.5s transform;
+  animation: none;
+  transform: rotate(45deg) translate(225px, 0px) scale(13);
 
+  @media (min-width: 1024px) {
+    transform: rotate(45deg) translate(225px, 0px) scale(20);
+  }
   a {
     right: calc(100vw + 250px);
   }
