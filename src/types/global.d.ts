@@ -1,8 +1,8 @@
-export {};
+export {}
 
 declare global {
   interface Window {
-    IMP: any;
-    dataLayer: any;
+    IMP: any
+    dataLayer: any
   }
 }

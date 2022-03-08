@@ -1,5 +1,5 @@
-import { sideStyle } from "../style/layout";
+import { sideStyle } from '../style/layout'
 
 export default function Side() {
-  return <aside css={sideStyle}></aside>;
+  return <aside css={sideStyle}></aside>
 }

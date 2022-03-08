@@ -4,7 +4,7 @@ import { useRecoilState, useSetRecoilState } from 'recoil'
 import { pageAnime } from 'src/store/recoil/page/atom'
 import { contentStyle } from '../src/style/layout'
 
-export default function Portfolio() {
+export default function Project() {
   // const [anime, setAnime] = useRecoilState(pageAnime)
   // useEffect(() => {
   //   if (!anime) setAnime('prev')
@@ -16,5 +16,5 @@ const S = css`
   flex: 1;
   height: 100%;
   background-size: cover;
-  background-color: #ff5f45;
+  background-color: #0798ec;
 `
